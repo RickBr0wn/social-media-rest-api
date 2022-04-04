@@ -1,0 +1,46 @@
+
+
+###
+# REGISTER
+###
+POST http://localhost:8800/api/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "John",
+  "email": "john@gmail.com",
+  "password": "password_john"
+}
+
+###
+# LOGIN
+###
+POST http://localhost:8800/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "password_john"
+}
+
+###
+# LOGIN - USER NOT FOUND
+###
+POST http://localhost:8800/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "xxxxxxx@xxx.xxx",
+  "password": "xxxxxxx"
+}
+
+###
+# LOGIN - INVALID PASSWORD
+###
+POST http://localhost:8800/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "xxxxxxxx"
+}

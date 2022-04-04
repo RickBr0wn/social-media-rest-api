@@ -1,0 +1,9 @@
+GET http://localhost:8800/ HTTP/1.1
+
+###
+
+GET http://localhost:8800/api/users HTTP/1.1s
+
+###
+
+GET http://localhost:8800/api/auth HTTP/1.1s
