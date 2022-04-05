@@ -3,8 +3,10 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 const helmet = require('helmet')
 const morgan = require('morgan')
+
 const userRoutes = require('./routes/users')
 const authRoutes = require('./routes/auth')
+const postRoutes = require('./routes/post')
 
 const app = express()
 
@@ -43,6 +45,7 @@ app.use((req, res, next) => {
 // routes
 app.use('/api/auth', authRoutes)
 app.use('/api/users', userRoutes)
+app.use('/api/posts', postRoutes)
 
 app.get('/', (req, res) => {
 	return res.json({

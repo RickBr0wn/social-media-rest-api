@@ -1,0 +1,59 @@
+### JANE - 624c41eec74a179b0e1144a2
+### JOHN - 624ae038cda0a4418805fd48
+
+###
+# CREATE A POST - USER: 624c41eec74a179b0e1144a2
+###
+POST http://localhost:8800/api/posts/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "624ae038cda0a4418805fd48",
+  "description": "This is John's fourth post!"
+}
+
+###
+# UPDATE A POST - POST: 624c49958e6d4cc1fcb84052
+###
+PUT http://localhost:8800/api/posts/624c49958e6d4cc1fcb84052 HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "624c41eec74a179b0e1144a2",
+  "description": "This is Jane's first updated post!"
+}
+
+###
+# DELETE A POST
+###
+DELETE http://localhost:8800/api/posts/624c4cc0e8bb40e9234d286e HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "624c41eec74a179b0e1144a2"
+}
+
+###
+# LIKE/DISLIKE A POST
+###
+PUT http://localhost:8800/api/posts/624c514458091c37c9ec02f3/like HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "624ae038cda0a4418805fd48"
+}
+
+###
+# GET A POST
+###
+GET http://localhost:8800/api/posts/624c49958e6d4cc1fcb84052/ HTTP/1.1
+
+###
+# GET TIMELINE POSTS
+###
+GET http://localhost:8800/api/posts/timeline/all HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "624c41eec74a179b0e1144a2"
+}

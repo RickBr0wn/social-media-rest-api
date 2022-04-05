@@ -1,3 +1,6 @@
+### JANE - 624c41eec74a179b0e1144a2
+### JOHN - 624ae038cda0a4418805fd48
+
 ###
 # UPDATE USER: 624ae038cda0a4418805fd48
 ###
@@ -29,18 +32,18 @@ GET http://localhost:8800/api/users/624ae038cda0a4418805fd48 HTTP/1.1
 # FOLLOWING A USER
 # 624ae038cda0a4418805fd48 -> 624c41eec74a179b0e1144a2
 ###
-PUT http://localhost:8800/api/users/624c41eec74a179b0e1144a2/follow
+PUT http://localhost:8800/api/users/624ae038cda0a4418805fd48/follow HTTP/1.1
 Content-Type: application/json
 
 {
-  "userId": "624ae038cda0a4418805fd48"
+  "userId": "624c41eec74a179b0e1144a2"
 }
 
 ###
 # UNFOLLOW A USER
 # 624ae038cda0a4418805fd48 ! 624c41eec74a179b0e1144a2
 ###
-PUT http://localhost:8800/api/users/624c41eec74a179b0e1144a2/unfollow
+PUT http://localhost:8800/api/users/624c41eec74a179b0e1144a2/unfollow HTTP/1.1
 Content-Type: application/json
 
 {
